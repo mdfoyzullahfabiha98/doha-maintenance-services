@@ -42,28 +42,28 @@ h1,h2,h3,.brand{font-family:'Space Grotesk',sans-serif;}
 html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] .brand{font-family:'Noto Kufi Arabic',sans-serif;}
 .wrap{max-width:1080px;margin:0 auto;padding-inline:20px;}
 header{position:sticky;top:0;z-index:10;background:var(--navy);color:var(--on-dark);border-bottom:1px solid rgba(197,160,89,0.2);}
-.headrow{display:flex;align-items:center;justify-content:space-between;padding-block:14px;gap:12px;}
-.brand-row{display:flex;align-items:center;gap:10px;}
-.brand-logo{width:36px;height:36px;object-fit:contain;flex:none;}
-.brand{font-weight:700;font-size:1.15rem;letter-spacing:.2px;}
+.headrow{display:flex;align-items:center;justify-content:space-between;padding-block:14px;gap:10px;}
+.brand-row{display:flex;align-items:center;gap:8px;}
+.brand-logo{width:36px;height:36px;object-fit:contain;flex:none;background:#fff;border-radius:6px;padding:2px;}
+.brand{font-weight:700;font-size:1.05rem;letter-spacing:.2px;}
 .brand span.gold{color:var(--gold);}
-.headctrls{display:flex;gap:8px;align-items:center;}
-.langbtn, .themebtn{border:1px solid rgba(247,242,231,.3);background:transparent;color:var(--on-dark);border-radius:20px;padding:6px 12px;font-size:.82rem;cursor:pointer;font-family:inherit;transition:border-color .2s,background .2s;}
+.headctrls{display:flex;gap:6px;align-items:center;}
+.langbtn, .themebtn{border:1px solid rgba(247,242,231,.3);background:transparent;color:var(--on-dark);border-radius:20px;padding:5px 10px;font-size:.78rem;cursor:pointer;font-family:inherit;transition:border-color .2s,background .2s;}
 .langbtn[aria-pressed="true"]{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:600;}
-.themebtn{display:flex;align-items:center;justify-content:center;padding:6px 10px;}
-.wa-pill{background:var(--wa);color:#fff;border-radius:20px;padding:7px 14px;font-size:.85rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:transform .15s,box-shadow .15s;}
+.themebtn{display:flex;align-items:center;justify-content:center;padding:5px 8px;}
+.wa-pill{background:var(--wa);color:#fff;border-radius:20px;padding:6px 12px;font-size:.8rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:transform .15s,box-shadow .15s;}
 .wa-pill:hover{transform:translateY(-1px);box-shadow:0 6px 16px -6px var(--wa);}
 main{padding-bottom:60px;}
-.hero{padding-block:56px 32px;position:relative;background:var(--navy);color:var(--on-dark);overflow:hidden;}
+.hero{padding-block:48px 28px;position:relative;background:var(--navy);color:var(--on-dark);overflow:hidden;}
 .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(650px 320px at 85% -10%,rgba(197,160,89,.22),transparent 70%);pointer-events:none;}
 .hero .wrap{position:relative;}
 .reveal{opacity:1;transform:translateY(0);animation:rise .7s cubic-bezier(.2,.7,.2,1) backwards;}
 .reveal.d1{animation-delay:.05s;} .reveal.d2{animation-delay:.18s;} .reveal.d3{animation-delay:.31s;} .reveal.d4{animation-delay:.44s;}
 @keyframes rise{from{transform:translateY(14px);}to{transform:translateY(0);}}
-.hero h1{font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.14;margin:0 0 14px;max-width:15ch;}
-.hero p{font-size:1.05rem;max-width:52ch;color:var(--on-dark);opacity:.9;margin:0 0 24px;}
-.hero .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px;}
-.cta{display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:12px 20px;font-weight:600;text-decoration:none;font-size:.98rem;transition:transform .15s,box-shadow .15s,background .15s;}
+.hero h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.14;margin:0 0 12px;max-width:15ch;}
+.hero p{font-size:1rem;max-width:52ch;color:var(--on-dark);opacity:.9;margin:0 0 20px;}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;}
+.cta{display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:12px 18px;font-weight:600;text-decoration:none;font-size:.95rem;transition:transform .15s,box-shadow .15s,background .15s;}
 .cta.primary{background:var(--wa);color:#fff;}
 .cta.primary:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px var(--wa);}
 .cta.secondary{background:transparent;color:var(--on-dark);border:1px solid rgba(247,242,231,.35);}
@@ -72,34 +72,49 @@ main{padding-bottom:60px;}
 .strip-track{display:flex;gap:8px;flex:none;animation:scroll-x 34s linear infinite;}
 @keyframes scroll-x{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 .chip{flex:none;border:1px solid rgba(247,242,231,.35);border-radius:8px;padding:6px 12px;font-size:.85rem;color:var(--on-dark);opacity:.9;}
-section{padding-block:40px;border-top:1px solid var(--line);}
-section > .wrap > h2{font-size:1.5rem;margin:0 0 6px;}
-section > .wrap > .sub{opacity:.7;margin:0 0 26px;max-width:56ch;}
+section{padding-block:36px;border-top:1px solid var(--line);}
+section > .wrap > h2{font-size:1.4rem;margin:0 0 6px;}
+section > .wrap > .sub{opacity:.7;margin:0 0 22px;max-width:56ch;font-size:.95rem;}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:10px;
-  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;}
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;}
 .card:hover{transform:translateY(-4px);box-shadow:0 16px 28px -18px rgba(11,15,25,.25);border-color:var(--gold);}
-.icon{position:relative;width:58px;height:58px;border-radius:15px;background:linear-gradient(155deg,var(--gold),var(--gold-deep));display:flex;align-items:center;justify-content:center;flex:none;}
-.icon svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
-.card h3{margin:0;font-size:1.02rem;}
-.card p{margin:0;font-size:.88rem;opacity:.72;flex-grow:1;}
-.card .link{align-self:flex-start;font-size:.85rem;font-weight:600;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:1px;}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
-.step{display:flex;gap:14px;align-items:flex-start;}
-.stepnum{font-weight:700;font-size:1.6rem;color:var(--gold);flex:none;width:2ch;}
-.step h3{margin:0 0 4px;font-size:1rem;}
-.step p{margin:0;font-size:.88rem;opacity:.72;}
+.icon{position:relative;width:52px;height:52px;border-radius:14px;background:linear-gradient(155deg,var(--gold),var(--gold-deep));display:flex;align-items:center;justify-content:center;flex:none;}
+.icon svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
+.card h3{margin:0;font-size:1rem;}
+.card p{margin:0;font-size:.85rem;opacity:.75;flex-grow:1;}
+.card .link{align-self:flex-start;font-size:.82rem;font-weight:600;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:1px;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+.step{display:flex;gap:12px;align-items:flex-start;}
+.stepnum{font-weight:700;font-size:1.5rem;color:var(--gold);flex:none;width:2ch;}
+.step h3{margin:0 0 4px;font-size:0.98rem;}
+.step p{margin:0;font-size:.85rem;opacity:.75;}
 .coverage{display:flex;flex-wrap:wrap;gap:8px;}
-.coverage span{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.85rem;}
-.trust-row{display:flex;flex-wrap:wrap;gap:22px;margin-top:2px;}
-.trust-item{display:flex;align-items:center;gap:8px;font-size:.92rem;color:var(--on-dark);opacity:.92;}
-.trust-item svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;}
-.contact-line{margin-top:6px;font-size:.88rem;opacity:.9;}
+.coverage span{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.82rem;}
+.trust-row{display:flex;flex-wrap:wrap;gap:16px;margin-top:2px;}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:.88rem;color:var(--on-dark);opacity:.92;}
+.trust-item svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;}
+.contact-line{margin-top:6px;font-size:.85rem;opacity:.9;}
 .contact-line a{color:var(--on-dark);}
-footer{border-top:1px solid var(--line);padding-block:28px;background:var(--navy);color:var(--on-dark);}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;font-size:.9rem;opacity:.9;}
+footer{border-top:1px solid var(--line);padding-block:24px;background:var(--navy);color:var(--on-dark);}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center;font-size:.85rem;opacity:.9;}
 footer a{color:var(--on-dark);}
-@media (max-width:520px){.hero{padding-block:38px 22px;}}
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 768px){
+  .headrow{padding-block:10px; gap:6px;}
+  .brand{font-size:0.92rem;}
+  .brand-logo{width:30px; height:30px;}
+  .headctrls{gap:4px;}
+  .langbtn, .themebtn{padding:4px 8px; font-size:.72rem;}
+  .wa-pill{padding:5px 10px; font-size:.75rem;}
+  .hero{padding-block:36px 20px;}
+  .hero h1{font-size:1.6rem;}
+  .hero p{font-size:0.92rem;}
+  .cta-row{flex-direction:column; gap:8px;}
+  .cta{width:100%; justify-content:center; padding:11px 16px;}
+  .grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -115,7 +130,7 @@ footer a{color:var(--on-dark);}
       <button class="themebtn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌙</button>
       <button class="langbtn" id="btn-en" aria-pressed="true" onclick="setLang('en')">EN</button>
       <button class="langbtn" id="btn-ar" aria-pressed="false" onclick="setLang('ar')">عربي</button>
-      <a class="wa-pill" href="https://wa.me/97451456622?text=Hello%2C%20I%20need%20a%20home%20service%20in%20Qatar." target="_blank" rel="noopener">
+      <a class="wa-pill" href="https://wa.me/97451456622?text=Hello%2C%20I%20need%20a%20home%20maintenance%20service." target="_blank" rel="noopener">
         <span class="t-en">WhatsApp</span><span class="t-ar">واتساب</span>
       </a>
     </div>
@@ -134,7 +149,7 @@ footer a{color:var(--on-dark);}
         <span class="t-ar">كهربائيون، دهانون، فنيو تكييف، عمال تنظيف وغيرهم — نخدم المنازل والمكاتب في جميع أنحاء قطر. أخبرنا بما تحتاجه عبر واتساب وسنوصلك بالفني المناسب.</span>
       </p>
       <div class="cta-row reveal d3">
-        <a class="cta primary" href="https://wa.me/97451456622?text=Hello%2C%20I%20need%20a%20home%20service%20in%20Qatar." target="_blank" rel="noopener">
+        <a class="cta primary" href="https://wa.me/97451456622?text=Hello%2C%20I%20need%20a%20home%20maintenance%20service." target="_blank" rel="noopener">
           <span class="t-en">Message us on WhatsApp</span><span class="t-ar">راسلنا على واتساب</span>
         </a>
         <a class="cta secondary" href="tel:+97451456622">
@@ -150,7 +165,7 @@ footer a{color:var(--on-dark);}
         <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><span class="t-en">Trusted technicians, all over Qatar</span><span class="t-ar">فنيون موثوقون في جميع أنحاء قطر</span></span></div>
         <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><span class="t-en">Fair, upfront pricing — no surprises</span><span class="t-ar">أسعار واضحة وعادلة بدون مفاجآت</span></span></div>
       </div>
-      <div class="strip reveal d4" style="margin-top:22px;"><div class="strip-track" id="chip-strip"></div></div>
+      <div class="strip reveal d4" style="margin-top:20px;"><div class="strip-track" id="chip-strip"></div></div>
     </div>
   </section>
 
@@ -198,7 +213,7 @@ footer a{color:var(--on-dark);}
   <div class="wrap">
     <div class="brand-row">
       <img class="brand-logo" style="width:28px;height:28px;" src="doha maitenance logo.png" alt="Doha Maintenance Services Logo">
-      <div class="brand" style="font-size:1rem;">Doha <span class="gold t-en">Maintenance Services</span><span class="gold t-ar">خدمات الصيانة</span></div>
+      <div class="brand" style="font-size:0.95rem;">Doha <span class="gold t-en">Maintenance Services</span><span class="gold t-ar">خدمات الصيانة</span></div>
     </div>
     <div>
       <a href="https://wa.me/97451456622" target="_blank" rel="noopener">WhatsApp +974 5145 6622</a>
@@ -208,8 +223,8 @@ footer a{color:var(--on-dark);}
       <a href="mailto:mdfoyzullahfabiha98@gmail.com">mdfoyzullahfabiha98@gmail.com</a>
     </div>
   </div>
-  <div class="wrap" style="margin-top:14px;">
-    <p style="margin:0;font-size:.85rem;opacity:.75;max-width:60ch;">
+  <div class="wrap" style="margin-top:12px;">
+    <p style="margin:0;font-size:0.82rem;opacity:.75;max-width:60ch;">
       <span class="t-en">Thank you for trusting Doha Maintenance Services — we're glad to help keep your home running smoothly.</span>
       <span class="t-ar">شكراً لثقتكم بخدمات الصيانة بالدوحة — يسعدنا أن نساعد في راحة منزلكم دائماً.</span>
     </p>
@@ -252,7 +267,7 @@ const services = [
 const grid = document.getElementById('service-grid');
 services.forEach(([en,ar,den,dar,icon])=>{
   const a = document.createElement('a');
-  a.href = 'https://wa.me/97451456622?text=' + encodeURIComponent('Hello, I need '+en+' service in Qatar.');
+  a.href = 'https://wa.me/97451456622?text=' + encodeURIComponent('Hello, I need '+en+' maintenance service.');
   a.target = '_blank'; a.rel='noopener'; a.style.textDecoration='none'; a.style.color='inherit';
   a.innerHTML = `<div class="card">
     <div class="icon"><svg viewBox="0 0 24 24">${ICONS[icon]}</svg></div>
@@ -307,7 +322,7 @@ function toggleTheme(){
   try{savedLang = localStorage.getItem('dhs-lang') || 'en';}catch(e){}
   setLang(savedLang);
 
-  let savedTheme = 'dark'; // ডিফল্টভাবে প্রিমিয়াম ডার্ক লুক থাকবে
+  let savedTheme = 'dark';
   try{savedTheme = localStorage.getItem('dhs-theme') || 'dark';}catch(e){}
   if(savedTheme === 'light'){
     document.documentElement.setAttribute('data-theme', 'light');
